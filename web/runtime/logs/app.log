@@ -1,0 +1,333 @@
+2018-02-27 11:18:57 [::1][-][-][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "site/about". in D:\xampp\htdocs\searchify\vendor\yiisoft\yii2\base\Module.php:537
+Stack trace:
+#0 D:\xampp\htdocs\searchify\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('site/about', Array)
+#1 D:\xampp\htdocs\searchify\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\xampp\htdocs\searchify\web\index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in D:\xampp\htdocs\searchify\vendor\yiisoft\yii2\web\Application.php:115
+Stack trace:
+#0 D:\xampp\htdocs\searchify\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\xampp\htdocs\searchify\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2018-02-27 11:18:57 [::1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'trackedEpisodeCount' => '14'
+    'trackedLastRecTS' => '1510563622296'
+    'proxyLastEventTS' => '1510582452279'
+    'ucivitUserId' => 'c2d4213e-e107-4efb-aa16-6bc7a34fbe67'
+    'ucivitEpisodeCount' => '7'
+    'ucivitLastLogTS' => '1518165234222'
+    '_redmine_session' => 'BAh7CjoMdXNlcl9pZGkGOgpjdGltZWwrB6hCjVo6CmF0aW1lbCsHqEKNWjodY3VycmVudF92aWV3X29mX2VTY2llbmNlSSIGMAY6BkVUSSIPc2Vzc2lvbl9pZAY7CVRJIiUzOGY2Yjg5NjI4OTFjNGY3NDY3OGM1MjI4YWY0ODlhYwY7CVQ=--34108d3c1f0ec22eabd7c3a4865126fd31a296ff'
+    'PHPSESSID' => 't9otunpvc850vi5mp28sqacaac'
+    '_csrf' => 'c73b5fc2dd16c12ce41db7cfda4650c3354bbbf333e37c87fae4eb2d1ba9b65da:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"wy3jWOL-_a4sMOHK0w1ckAtPHz1y8E70\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__captcha/site/captcha' => 'hatixuc'
+    '__captcha/site/captchacount' => 1
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.91 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8,ar;q=0.6'
+    'HTTP_COOKIE' => 'trackedEpisodeCount=14; trackedLastRecTS=1510563622296; proxyLastEventTS=1510582452279; ucivitUserId=c2d4213e-e107-4efb-aa16-6bc7a34fbe67; ucivitEpisodeCount=7; ucivitLastLogTS=1518165234222; _redmine_session=BAh7CjoMdXNlcl9pZGkGOgpjdGltZWwrB6hCjVo6CmF0aW1lbCsHqEKNWjodY3VycmVudF92aWV3X29mX2VTY2llbmNlSSIGMAY6BkVUSSIPc2Vzc2lvbl9pZAY7CVRJIiUzOGY2Yjg5NjI4OTFjNGY3NDY3OGM1MjI4YWY0ODlhYwY7CVQ%3D--34108d3c1f0ec22eabd7c3a4865126fd31a296ff; PHPSESSID=t9otunpvc850vi5mp28sqacaac; _csrf=c73b5fc2dd16c12ce41db7cfda4650c3354bbbf333e37c87fae4eb2d1ba9b65da%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22wy3jWOL-_a4sMOHK0w1ckAtPHz1y8E70%22%3B%7D'
+    'PATH' => 'C:\\Perl64\\site\\bin;C:\\Perl64\\bin;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Lenovo\\Access Connections\\;C:\\Program Files\\Lenovo\\Fingerprint Manager Pro\\;C:\\Program Files (x86)\\Bitvise SSH Client;C:\\Program Files\\Git\\cmd;C:\\HashiCorp\\Vagrant\\bin;C:\\Program Files\\MiKTeX 2.9\\miktex\\bin\\x64\\;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\Program Files (x86)\\OpenVPN\\bin;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\Program Files (x86)\\Intel\\UCRT\\;C:\\Program Files\\Intel\\UCRT\\;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\TortoiseGit\\bin;C:\\Users\\Saleh Ahmed\\AppData\\Local\\Continuum\\Anaconda2;C:\\Users\\Saleh Ahmed\\AppData\\Local\\Continuum\\Anaconda2\\Scripts;C:\\Users\\Saleh Ahmed\\AppData\\Local\\Continuum\\Anaconda2\\Library\\bin;C:\\Ruby23\\bin;C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Common Files\\Lenovo;C:\\SWTOOLS\\ReadyApps;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Program Files\\Curl\\bin;C:\\Python27;C:\\Users\\saleh ahmed\\AppData\\Local\\Programs\\MiKTeX 2.9\\miktex\\bin\\x64\\;C:\\Python27\\Scripts;C:\\Program Files\\Indri\\Indri 5.11\\bin;C:\\Users\\Saleh Ahmed\\AppData\\Local\\Pandoc\\'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.RB;.RBW'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Win32) OpenSSL/1.1.0g PHP/7.2.2 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Win32) OpenSSL/1.1.0g PHP/7.2.2'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/xampp/htdocs/searchify/web/index.php'
+    'REMOTE_PORT' => '58676'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/searchify/web/index.php/site/about'
+    'SCRIPT_NAME' => '/searchify/web/index.php'
+    'PATH_INFO' => '/site/about'
+    'PATH_TRANSLATED' => 'D:\\xampp\\htdocs\\site\\about'
+    'PHP_SELF' => '/searchify/web/index.php/site/about'
+    'REQUEST_TIME_FLOAT' => 1519726737.673
+    'REQUEST_TIME' => 1519726737
+]
+2018-02-27 11:19:10 [::1][-][-][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "". in D:\xampp\htdocs\searchify\vendor\yiisoft\yii2\base\Module.php:537
+Stack trace:
+#0 D:\xampp\htdocs\searchify\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('', Array)
+#1 D:\xampp\htdocs\searchify\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\xampp\htdocs\searchify\web\index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in D:\xampp\htdocs\searchify\vendor\yiisoft\yii2\web\Application.php:115
+Stack trace:
+#0 D:\xampp\htdocs\searchify\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\xampp\htdocs\searchify\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2018-02-27 11:19:10 [::1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'trackedEpisodeCount' => '14'
+    'trackedLastRecTS' => '1510563622296'
+    'proxyLastEventTS' => '1510582452279'
+    'ucivitUserId' => 'c2d4213e-e107-4efb-aa16-6bc7a34fbe67'
+    'ucivitEpisodeCount' => '7'
+    'ucivitLastLogTS' => '1518165234222'
+    '_redmine_session' => 'BAh7CjoMdXNlcl9pZGkGOgpjdGltZWwrB6hCjVo6CmF0aW1lbCsHqEKNWjodY3VycmVudF92aWV3X29mX2VTY2llbmNlSSIGMAY6BkVUSSIPc2Vzc2lvbl9pZAY7CVRJIiUzOGY2Yjg5NjI4OTFjNGY3NDY3OGM1MjI4YWY0ODlhYwY7CVQ=--34108d3c1f0ec22eabd7c3a4865126fd31a296ff'
+    'PHPSESSID' => 't9otunpvc850vi5mp28sqacaac'
+    '_csrf' => 'c73b5fc2dd16c12ce41db7cfda4650c3354bbbf333e37c87fae4eb2d1ba9b65da:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"wy3jWOL-_a4sMOHK0w1ckAtPHz1y8E70\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__captcha/site/captcha' => 'hatixuc'
+    '__captcha/site/captchacount' => 1
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.91 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://localhost/searchify/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8,ar;q=0.6'
+    'HTTP_COOKIE' => 'trackedEpisodeCount=14; trackedLastRecTS=1510563622296; proxyLastEventTS=1510582452279; ucivitUserId=c2d4213e-e107-4efb-aa16-6bc7a34fbe67; ucivitEpisodeCount=7; ucivitLastLogTS=1518165234222; _redmine_session=BAh7CjoMdXNlcl9pZGkGOgpjdGltZWwrB6hCjVo6CmF0aW1lbCsHqEKNWjodY3VycmVudF92aWV3X29mX2VTY2llbmNlSSIGMAY6BkVUSSIPc2Vzc2lvbl9pZAY7CVRJIiUzOGY2Yjg5NjI4OTFjNGY3NDY3OGM1MjI4YWY0ODlhYwY7CVQ%3D--34108d3c1f0ec22eabd7c3a4865126fd31a296ff; PHPSESSID=t9otunpvc850vi5mp28sqacaac; _csrf=c73b5fc2dd16c12ce41db7cfda4650c3354bbbf333e37c87fae4eb2d1ba9b65da%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22wy3jWOL-_a4sMOHK0w1ckAtPHz1y8E70%22%3B%7D'
+    'PATH' => 'C:\\Perl64\\site\\bin;C:\\Perl64\\bin;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Lenovo\\Access Connections\\;C:\\Program Files\\Lenovo\\Fingerprint Manager Pro\\;C:\\Program Files (x86)\\Bitvise SSH Client;C:\\Program Files\\Git\\cmd;C:\\HashiCorp\\Vagrant\\bin;C:\\Program Files\\MiKTeX 2.9\\miktex\\bin\\x64\\;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\Program Files (x86)\\OpenVPN\\bin;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\Program Files (x86)\\Intel\\UCRT\\;C:\\Program Files\\Intel\\UCRT\\;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\TortoiseGit\\bin;C:\\Users\\Saleh Ahmed\\AppData\\Local\\Continuum\\Anaconda2;C:\\Users\\Saleh Ahmed\\AppData\\Local\\Continuum\\Anaconda2\\Scripts;C:\\Users\\Saleh Ahmed\\AppData\\Local\\Continuum\\Anaconda2\\Library\\bin;C:\\Ruby23\\bin;C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Common Files\\Lenovo;C:\\SWTOOLS\\ReadyApps;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Program Files\\Curl\\bin;C:\\Python27;C:\\Users\\saleh ahmed\\AppData\\Local\\Programs\\MiKTeX 2.9\\miktex\\bin\\x64\\;C:\\Python27\\Scripts;C:\\Program Files\\Indri\\Indri 5.11\\bin;C:\\Users\\Saleh Ahmed\\AppData\\Local\\Pandoc\\'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.RB;.RBW'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Win32) OpenSSL/1.1.0g PHP/7.2.2 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Win32) OpenSSL/1.1.0g PHP/7.2.2'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/xampp/htdocs/searchify/web/index.php'
+    'REMOTE_PORT' => '58677'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/searchify/web/'
+    'SCRIPT_NAME' => '/searchify/web/index.php'
+    'PHP_SELF' => '/searchify/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1519726750.506
+    'REQUEST_TIME' => 1519726750
+]
+2018-02-27 11:19:58 [::1][-][t9otunpvc850vi5mp28sqacaac][error][yii\base\UnknownPropertyException] yii\base\UnknownPropertyException: Setting unknown property: yii\web\UrlManager::urlFormat in D:\xampp\htdocs\searchify\vendor\yiisoft\yii2\base\Component.php:209
+Stack trace:
+#0 D:\xampp\htdocs\searchify\vendor\yiisoft\yii2\BaseYii.php(546): yii\base\Component->__set('urlFormat', 'path')
+#1 D:\xampp\htdocs\searchify\vendor\yiisoft\yii2\base\BaseObject.php(107): yii\BaseYii::configure(Object(yii\web\UrlManager), Array)
+#2 [internal function]: yii\base\BaseObject->__construct(Array)
+#3 D:\xampp\htdocs\searchify\vendor\yiisoft\yii2\di\Container.php(383): ReflectionClass->newInstanceArgs(Array)
+#4 D:\xampp\htdocs\searchify\vendor\yiisoft\yii2\di\Container.php(156): yii\di\Container->build('yii\\web\\UrlMana...', Array, Array)
+#5 D:\xampp\htdocs\searchify\vendor\yiisoft\yii2\BaseYii.php(349): yii\di\Container->get('yii\\web\\UrlMana...', Array, Array)
+#6 D:\xampp\htdocs\searchify\vendor\yiisoft\yii2\di\ServiceLocator.php(137): yii\BaseYii::createObject(Array)
+#7 D:\xampp\htdocs\searchify\vendor\yiisoft\yii2\base\Module.php(742): yii\di\ServiceLocator->get('urlManager', true)
+#8 D:\xampp\htdocs\searchify\vendor\yiisoft\yii2\base\Application.php(571): yii\base\Module->get('urlManager')
+#9 D:\xampp\htdocs\searchify\vendor\yiisoft\yii2-debug\Module.php(197): yii\base\Application->getUrlManager()
+#10 D:\xampp\htdocs\searchify\vendor\yiisoft\yii2\base\Application.php(327): yii\debug\Module->bootstrap(Object(yii\web\Application))
+#11 D:\xampp\htdocs\searchify\vendor\yiisoft\yii2\web\Application.php(69): yii\base\Application->bootstrap()
+#12 D:\xampp\htdocs\searchify\vendor\yiisoft\yii2\base\Application.php(273): yii\web\Application->bootstrap()
+#13 D:\xampp\htdocs\searchify\vendor\yiisoft\yii2\base\BaseObject.php(109): yii\base\Application->init()
+#14 D:\xampp\htdocs\searchify\vendor\yiisoft\yii2\base\Application.php(206): yii\base\BaseObject->__construct(Array)
+#15 D:\xampp\htdocs\searchify\web\index.php(12): yii\base\Application->__construct(Array)
+#16 {main}
+2018-02-27 11:19:58 [::1][-][t9otunpvc850vi5mp28sqacaac][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'trackedEpisodeCount' => '14'
+    'trackedLastRecTS' => '1510563622296'
+    'proxyLastEventTS' => '1510582452279'
+    'ucivitUserId' => 'c2d4213e-e107-4efb-aa16-6bc7a34fbe67'
+    'ucivitEpisodeCount' => '7'
+    'ucivitLastLogTS' => '1518165234222'
+    '_redmine_session' => 'BAh7CjoMdXNlcl9pZGkGOgpjdGltZWwrB6hCjVo6CmF0aW1lbCsHqEKNWjodY3VycmVudF92aWV3X29mX2VTY2llbmNlSSIGMAY6BkVUSSIPc2Vzc2lvbl9pZAY7CVRJIiUzOGY2Yjg5NjI4OTFjNGY3NDY3OGM1MjI4YWY0ODlhYwY7CVQ=--34108d3c1f0ec22eabd7c3a4865126fd31a296ff'
+    'PHPSESSID' => 't9otunpvc850vi5mp28sqacaac'
+    '_csrf' => 'c73b5fc2dd16c12ce41db7cfda4650c3354bbbf333e37c87fae4eb2d1ba9b65da:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"wy3jWOL-_a4sMOHK0w1ckAtPHz1y8E70\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__captcha/site/captcha' => 'hatixuc'
+    '__captcha/site/captchacount' => 1
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.91 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8,ar;q=0.6'
+    'HTTP_COOKIE' => 'trackedEpisodeCount=14; trackedLastRecTS=1510563622296; proxyLastEventTS=1510582452279; ucivitUserId=c2d4213e-e107-4efb-aa16-6bc7a34fbe67; ucivitEpisodeCount=7; ucivitLastLogTS=1518165234222; _redmine_session=BAh7CjoMdXNlcl9pZGkGOgpjdGltZWwrB6hCjVo6CmF0aW1lbCsHqEKNWjodY3VycmVudF92aWV3X29mX2VTY2llbmNlSSIGMAY6BkVUSSIPc2Vzc2lvbl9pZAY7CVRJIiUzOGY2Yjg5NjI4OTFjNGY3NDY3OGM1MjI4YWY0ODlhYwY7CVQ%3D--34108d3c1f0ec22eabd7c3a4865126fd31a296ff; PHPSESSID=t9otunpvc850vi5mp28sqacaac; _csrf=c73b5fc2dd16c12ce41db7cfda4650c3354bbbf333e37c87fae4eb2d1ba9b65da%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22wy3jWOL-_a4sMOHK0w1ckAtPHz1y8E70%22%3B%7D'
+    'PATH' => 'C:\\Perl64\\site\\bin;C:\\Perl64\\bin;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Lenovo\\Access Connections\\;C:\\Program Files\\Lenovo\\Fingerprint Manager Pro\\;C:\\Program Files (x86)\\Bitvise SSH Client;C:\\Program Files\\Git\\cmd;C:\\HashiCorp\\Vagrant\\bin;C:\\Program Files\\MiKTeX 2.9\\miktex\\bin\\x64\\;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\Program Files (x86)\\OpenVPN\\bin;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\Program Files (x86)\\Intel\\UCRT\\;C:\\Program Files\\Intel\\UCRT\\;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\TortoiseGit\\bin;C:\\Users\\Saleh Ahmed\\AppData\\Local\\Continuum\\Anaconda2;C:\\Users\\Saleh Ahmed\\AppData\\Local\\Continuum\\Anaconda2\\Scripts;C:\\Users\\Saleh Ahmed\\AppData\\Local\\Continuum\\Anaconda2\\Library\\bin;C:\\Ruby23\\bin;C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Common Files\\Lenovo;C:\\SWTOOLS\\ReadyApps;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Program Files\\Curl\\bin;C:\\Python27;C:\\Users\\saleh ahmed\\AppData\\Local\\Programs\\MiKTeX 2.9\\miktex\\bin\\x64\\;C:\\Python27\\Scripts;C:\\Program Files\\Indri\\Indri 5.11\\bin;C:\\Users\\Saleh Ahmed\\AppData\\Local\\Pandoc\\'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.RB;.RBW'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Win32) OpenSSL/1.1.0g PHP/7.2.2 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Win32) OpenSSL/1.1.0g PHP/7.2.2'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/xampp/htdocs/searchify/web/index.php'
+    'REMOTE_PORT' => '58744'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/searchify/web/'
+    'SCRIPT_NAME' => '/searchify/web/index.php'
+    'PHP_SELF' => '/searchify/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1519726798.617
+    'REQUEST_TIME' => 1519726798
+]
+2018-02-27 11:20:12 [::1][-][-][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "". in D:\xampp\htdocs\searchify\vendor\yiisoft\yii2\base\Module.php:537
+Stack trace:
+#0 D:\xampp\htdocs\searchify\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('', Array)
+#1 D:\xampp\htdocs\searchify\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\xampp\htdocs\searchify\web\index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in D:\xampp\htdocs\searchify\vendor\yiisoft\yii2\web\Application.php:115
+Stack trace:
+#0 D:\xampp\htdocs\searchify\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\xampp\htdocs\searchify\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2018-02-27 11:20:12 [::1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'trackedEpisodeCount' => '14'
+    'trackedLastRecTS' => '1510563622296'
+    'proxyLastEventTS' => '1510582452279'
+    'ucivitUserId' => 'c2d4213e-e107-4efb-aa16-6bc7a34fbe67'
+    'ucivitEpisodeCount' => '7'
+    'ucivitLastLogTS' => '1518165234222'
+    '_redmine_session' => 'BAh7CjoMdXNlcl9pZGkGOgpjdGltZWwrB6hCjVo6CmF0aW1lbCsHqEKNWjodY3VycmVudF92aWV3X29mX2VTY2llbmNlSSIGMAY6BkVUSSIPc2Vzc2lvbl9pZAY7CVRJIiUzOGY2Yjg5NjI4OTFjNGY3NDY3OGM1MjI4YWY0ODlhYwY7CVQ=--34108d3c1f0ec22eabd7c3a4865126fd31a296ff'
+    'PHPSESSID' => 't9otunpvc850vi5mp28sqacaac'
+    '_csrf' => 'c73b5fc2dd16c12ce41db7cfda4650c3354bbbf333e37c87fae4eb2d1ba9b65da:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"wy3jWOL-_a4sMOHK0w1ckAtPHz1y8E70\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__captcha/site/captcha' => 'hatixuc'
+    '__captcha/site/captchacount' => 1
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.91 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8,ar;q=0.6'
+    'HTTP_COOKIE' => 'trackedEpisodeCount=14; trackedLastRecTS=1510563622296; proxyLastEventTS=1510582452279; ucivitUserId=c2d4213e-e107-4efb-aa16-6bc7a34fbe67; ucivitEpisodeCount=7; ucivitLastLogTS=1518165234222; _redmine_session=BAh7CjoMdXNlcl9pZGkGOgpjdGltZWwrB6hCjVo6CmF0aW1lbCsHqEKNWjodY3VycmVudF92aWV3X29mX2VTY2llbmNlSSIGMAY6BkVUSSIPc2Vzc2lvbl9pZAY7CVRJIiUzOGY2Yjg5NjI4OTFjNGY3NDY3OGM1MjI4YWY0ODlhYwY7CVQ%3D--34108d3c1f0ec22eabd7c3a4865126fd31a296ff; PHPSESSID=t9otunpvc850vi5mp28sqacaac; _csrf=c73b5fc2dd16c12ce41db7cfda4650c3354bbbf333e37c87fae4eb2d1ba9b65da%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22wy3jWOL-_a4sMOHK0w1ckAtPHz1y8E70%22%3B%7D'
+    'PATH' => 'C:\\Perl64\\site\\bin;C:\\Perl64\\bin;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Lenovo\\Access Connections\\;C:\\Program Files\\Lenovo\\Fingerprint Manager Pro\\;C:\\Program Files (x86)\\Bitvise SSH Client;C:\\Program Files\\Git\\cmd;C:\\HashiCorp\\Vagrant\\bin;C:\\Program Files\\MiKTeX 2.9\\miktex\\bin\\x64\\;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\Program Files (x86)\\OpenVPN\\bin;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\Program Files (x86)\\Intel\\UCRT\\;C:\\Program Files\\Intel\\UCRT\\;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\TortoiseGit\\bin;C:\\Users\\Saleh Ahmed\\AppData\\Local\\Continuum\\Anaconda2;C:\\Users\\Saleh Ahmed\\AppData\\Local\\Continuum\\Anaconda2\\Scripts;C:\\Users\\Saleh Ahmed\\AppData\\Local\\Continuum\\Anaconda2\\Library\\bin;C:\\Ruby23\\bin;C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Common Files\\Lenovo;C:\\SWTOOLS\\ReadyApps;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Program Files\\Curl\\bin;C:\\Python27;C:\\Users\\saleh ahmed\\AppData\\Local\\Programs\\MiKTeX 2.9\\miktex\\bin\\x64\\;C:\\Python27\\Scripts;C:\\Program Files\\Indri\\Indri 5.11\\bin;C:\\Users\\Saleh Ahmed\\AppData\\Local\\Pandoc\\'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.RB;.RBW'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Win32) OpenSSL/1.1.0g PHP/7.2.2 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Win32) OpenSSL/1.1.0g PHP/7.2.2'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/xampp/htdocs/searchify/web/index.php'
+    'REMOTE_PORT' => '58775'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/searchify/web/'
+    'SCRIPT_NAME' => '/searchify/web/index.php'
+    'PHP_SELF' => '/searchify/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1519726812.064
+    'REQUEST_TIME' => 1519726812
+]

@@ -9,6 +9,11 @@ use yii\web\Response;
 use yii\filters\VerbFilter;
 use app\models\LoginForm;
 use app\models\ContactForm;
+use app\models\SearchForm;
+use Elasticsearch\ClientBuilder;
+require '../vendor/autoload.php';
+
+
 
 class SiteController extends Controller
 {
@@ -61,7 +66,63 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        return $this->render('index');
+		$model = new SearchForm();
+		
+		$client = ClientBuilder::create()->build();
+
+        if ($model->load(Yii::$app->request->post()) && $model->search()) 
+		{
+			// Index a document in elasticsearch 
+			// $params = [
+			// 'index' => 'my_index',
+			// 'type' => 'my_type',
+			// 'id' => 'my_id',
+			// 'body' => ['testField' => 'abc']
+			// ];
+
+			// $response = $client->index($params);
+			// print_r($response);
+			// die();
+
+
+			
+			
+			// search for a document from elasticsearch index
+			$params = [
+				'index' => 'bank',
+				'type' => 'account',
+				'body' => [
+					'query' => [
+						'multi_match' => [
+							'query'  => 'Nelson', 
+							'fields' => [ 'city', 'lastname', 'employer']
+						]
+					]
+				]
+			];
+
+			$response = $client->search($params);
+			print_r($response);
+			//die;
+			
+			# Here, q object is the user query
+			$q=Yii::$app->request->post('SearchForm')['query']; //For PHP > 5.4
+			var_dump ($q);
+			#return $this->refresh();
+			
+			return $this->render('index', [
+            'model' => $model,
+			]);
+			
+			
+			#echo $q; 
+			#die;
+            
+        }
+		
+        return $this->render('index', [
+            'model' => $model,
+        ]);
     }
 
     /**
