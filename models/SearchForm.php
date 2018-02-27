@@ -12,6 +12,8 @@ class SearchForm extends Model
 {
     public $query;
     public $category;
+	public $searchresults_json;
+	public $searchresults;
 	//public $email;
     //public $subject;
     //public $body;

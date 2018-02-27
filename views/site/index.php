@@ -8,7 +8,9 @@ use yii\helpers\Html;
 use yii\bootstrap\ActiveForm;
 use yii\captcha\Captcha;
 
-$this->title = 'My Yii Application';
+use yii\widgets\LinkPager;
+
+$this->title = 'My Searchengine ';
 
 
 
@@ -47,23 +49,17 @@ $this->title = 'My Yii Application';
     </div>
 	
 	
-	<div> 
+	<div>
 	
-		<?php 
-			
-			if (isset($_POST['query']))
-			{
-				echo "defined";
-								
-			}
-			else
-			{
-				echo "undefined query";
-			}
-		?> 
-	
-	
-	
+		<h1>Search Results</h1>
+		<ul>
+		<?php  ?>
+			<li>
+				<?= Html::encode("{$searchresults}") ?>
+			</li>
+		</ul>
+
+		
 	</div>
 	
 	

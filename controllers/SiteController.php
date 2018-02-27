@@ -13,6 +13,7 @@ use app\models\SearchForm;
 use Elasticsearch\ClientBuilder;
 require '../vendor/autoload.php';
 
+use yii\data\Pagination;
 
 
 class SiteController extends Controller
@@ -100,27 +101,54 @@ class SiteController extends Controller
 					]
 				]
 			];
+			
+			
+			$q=Yii::$app->request->post('SearchForm')['query']; //For PHP > 5.4
+			
+			
+			// to do: use q to search for the query
+			
+			$params = [
+				'index' => 'bank',
+				'type' => 'account',
+				'body' => [
+					'query' => [
+						'match' => [
+							'state' => 'PA'
+						]
+					]
+				]
+			];
+
 
 			$response = $client->search($params);
-			print_r($response);
+
+			//$response = $client->search($params);
+			$searchresults_json= json_encode($response['hits']['hits'],true);
+			//print_r ($searchresults_json);
 			//die;
 			
-			# Here, q object is the user query
-			$q=Yii::$app->request->post('SearchForm')['query']; //For PHP > 5.4
-			var_dump ($q);
-			#return $this->refresh();
+			
 			
 			return $this->render('index', [
-            'model' => $model,
+			    'model' => $model,
+				'searchresults' => $searchresults_json,
 			]);
 			
+			/* return $this->render('index', [
+				'searchresults' => $searchresults,
+				'pagination' => $pagination,
+			]); */
 			
-			#echo $q; 
-			#die;
+			# Here, q object is the user query
+			//var_dump ($q);
+			
+			
             
         }
 		
         return $this->render('index', [
+			'searchresults' => $model->searchresults_json,
             'model' => $model,
         ]);
     }
