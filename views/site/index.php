@@ -53,12 +53,38 @@ $this->title = 'My Searchengine ';
 	
 		<h1>Search Results</h1>
 		<ul>
-		<?php  ?>
-			<li>
-				<?= Html::encode("{$searchresults}") ?>
-			</li>
-		</ul>
+			
+		<?php if (  isset($searchresults) && (is_array($searchresults) || is_object($searchresults))  ) {  
+				foreach($searchresults as $key => $searchresult) {
+		?>
+				<li>
+				
+					<?= 
+						//$searchresult = json_encode($searchresult, true);
+						print_r($searchresult);
+						//echo ($searchresult->_index)
+					?>
 
+				</li>
+			
+		
+				<?php  }   ?>
+		
+	
+		
+		</ul>
+		
+		
+		
+		<?php  
+			echo LinkPager::widget([
+				'pagination' => $pages,
+			]);
+		?>
+		
+		
+		<?php  }   ?>
+		
 		
 	</div>
 	

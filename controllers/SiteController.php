@@ -13,7 +13,11 @@ use app\models\SearchForm;
 use Elasticsearch\ClientBuilder;
 require '../vendor/autoload.php';
 
+use yii\helpers\Url;
 use yii\data\Pagination;
+
+use yii\widgets\LinkPager;
+
 
 
 class SiteController extends Controller
@@ -71,85 +75,77 @@ class SiteController extends Controller
 		
 		$client = ClientBuilder::create()->build();
 
+		
+		
         if ($model->load(Yii::$app->request->post()) && $model->search()) 
 		{
-			// Index a document in elasticsearch 
-			// $params = [
-			// 'index' => 'my_index',
-			// 'type' => 'my_type',
-			// 'id' => 'my_id',
-			// 'body' => ['testField' => 'abc']
-			// ];
-
-			// $response = $client->index($params);
-			// print_r($response);
-			// die();
-
-
 			
-			
-			// search for a document from elasticsearch index
-			$params = [
-				'index' => 'bank',
-				'type' => 'account',
-				'body' => [
-					'query' => [
-						'multi_match' => [
-							'query'  => 'Nelson', 
-							'fields' => [ 'city', 'lastname', 'employer']
-						]
-					]
-				]
-			];
-			
-			
+				
+			// Get the user query 
 			$q=Yii::$app->request->post('SearchForm')['query']; //For PHP > 5.4
 			
 			
-			// to do: use q to search for the query
 			
+			// Search for a document in ES 
 			$params = [
-				'index' => 'bank',
-				'type' => 'account',
+				'index' => Yii::$app->params['indexName'],
+				'type' =>  Yii::$app->params['indexType'],
+				'from' => 0,
+				'size' => Yii::$app->params['page_size'],
 				'body' => [
 					'query' => [
-						'match' => [
-							'state' => 'PA'
+						'multi_match' => [
+							'query'  => $q, 
+							'fields' => [ 'city', 'state', 'employer']
 						]
 					]
 				]
 			];
-
-
+		
 			$response = $client->search($params);
 
-			//$response = $client->search($params);
-			$searchresults_json= json_encode($response['hits']['hits'],true);
-			//print_r ($searchresults_json);
+			#echo Url::to(['', 'id' => 100, '#' => 'content']);
+			#die;
+			
+			
+			//print_r($response['hits']['total']);
 			//die;
 			
+			// create a pagination object with the total count
+			$pagination = new Pagination(['totalCount' => $response['hits']['total'],  'pageSize' =>Yii::$app->params['page_size']] );
 			
-			
-			return $this->render('index', [
-			    'model' => $model,
-				'searchresults' => $searchresults_json,
+			echo LinkPager::widget([
+				'pagination' => $pagination,
 			]);
 			
-			/* return $this->render('index', [
-				'searchresults' => $searchresults,
-				'pagination' => $pagination,
-			]); */
-			
-			# Here, q object is the user query
-			//var_dump ($q);
 			
 			
-            
+			// Encode the JSON results
+			//$searchresults_json= json_decode($response['hits']['hits']);
+			
+			// If you do not specify this, the currently requested route will be used
+			$pagination->route = 'site/index';
+			
+			
+			// displays: /index.php?r=article%2Findex&page=100
+			//echo $pagination->createUrl(100);
+			#die;
+			
+			
+			// Send it to the viewer to draw it
+			return $this->render('index', [
+			    'model' => $model,
+				'pages' => $pagination, 
+				'searchresults' => $response['hits']['hits'],
+			]);
+			
+			
         }
 		
+		
+		
         return $this->render('index', [
-			'searchresults' => $model->searchresults_json,
-            'model' => $model,
+			'model' => $model,
         ]);
     }
 
