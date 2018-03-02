@@ -77,31 +77,52 @@ class SiteController extends Controller
 
 		
 		
-        if ($model->load(Yii::$app->request->post()) && $model->search()) 
+        if ($model->load(Yii::$app->request->get()) && $model->search()) 
 		{
 			
 				
 			// Get the user query 
-			$q=Yii::$app->request->post('SearchForm')['query']; //For PHP > 5.4
+			$q=Yii::$app->request->get('SearchForm')['query']; //For PHP > 5.4
 			
-			
-			
-			// Search for a document in ES 
-			$params = [
-				'index' => Yii::$app->params['indexName'],
-				'type' =>  Yii::$app->params['indexType'],
-				'from' => 0,
-				'size' => Yii::$app->params['page_size'],
-				'body' => [
-					'query' => [
-						'multi_match' => [
-							'query'  => $q, 
-							'fields' => [ 'city', 'state', 'employer']
+			if(Yii::$app->request->get('page')) 				
+			{
+				// Search for a document in ES 
+				$params = [
+					'index' => Yii::$app->params['indexName'],
+					'type' =>  Yii::$app->params['indexType'],
+					'from' => Yii::$app->request->get('page')[0],
+					'size' => Yii::$app->params['page_size'],
+					'body' => [
+						'query' => [
+							'multi_match' => [
+								'query'  => $q, 
+								'fields' => [ 'city', 'state', 'employer']
+							]
 						]
 					]
-				]
-			];
-		
+				];
+
+			}
+			else
+			{
+				// Search for a document in ES 
+				$params = [
+					'index' => Yii::$app->params['indexName'],
+					'type' =>  Yii::$app->params['indexType'],
+					'from' => 0,
+					'size' => Yii::$app->params['page_size'],
+					'body' => [
+						'query' => [
+							'multi_match' => [
+								'query'  => $q, 
+								'fields' => [ 'city', 'state', 'employer']
+							]
+						]
+					]
+				];
+				
+			}
+				
 			$response = $client->search($params);
 
 			#echo Url::to(['', 'id' => 100, '#' => 'content']);
@@ -114,9 +135,6 @@ class SiteController extends Controller
 			// create a pagination object with the total count
 			$pagination = new Pagination(['totalCount' => $response['hits']['total'],  'pageSize' =>Yii::$app->params['page_size']] );
 			
-			echo LinkPager::widget([
-				'pagination' => $pagination,
-			]);
 			
 			
 			
@@ -148,6 +166,11 @@ class SiteController extends Controller
 			'model' => $model,
         ]);
     }
+
+
+	
+
+
 
     /**
      * Login action.

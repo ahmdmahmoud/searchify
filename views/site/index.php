@@ -6,10 +6,11 @@
 
 use yii\helpers\Html;
 use yii\bootstrap\ActiveForm;
-use yii\captcha\Captcha;
+use yii\helpers\Url;
 
 use yii\widgets\LinkPager;
 
+			
 $this->title = 'My Searchengine ';
 
 
@@ -24,15 +25,20 @@ $this->title = 'My Searchengine ';
 		<div class="row">
             <div >
 
-				<?php $form = ActiveForm::begin(['id' => 'search-form']); ?>
+				<?php $form = ActiveForm::begin(['id' => 'search-form', 'action' => Url::to(['site/index']), 'method' => 'get']); ?>
 
-                    <?= $form->field($model, 'query')->textInput(['autofocus' => true]) ?>
-					<?= $form->field($model, 'category')->dropdownlist ([
-														1 => 'item 1', 
-														2 => 'item 2'
-													],
-													['prompt'=>'Select Category']
-												); ?>
+                    <?= $form->field($model, 'query')->textInput(['autofocus' => true]);
+					
+						$form->field($model, 'category')->dropdownlist ([
+															1 => 'item 1', 
+															2 => 'item 2'
+														],
+														['prompt'=>'Select Category']
+													);
+
+
+					?>
+					
 
                     
                     
@@ -77,9 +83,12 @@ $this->title = 'My Searchengine ';
 		
 		
 		<?php  
+						
+			
 			echo LinkPager::widget([
 				'pagination' => $pages,
 			]);
+
 		?>
 		
 		
