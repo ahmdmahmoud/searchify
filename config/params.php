@@ -2,7 +2,7 @@
 
 return [
     'adminEmail' => 'admin@example.com',
-	'indexName'  => 'bank',
-	'indexType'  => 'account',
+	'indexName'  => 'moving',
+	'indexType'  => 'publication',
 	'page_size'  => 10,
 ];

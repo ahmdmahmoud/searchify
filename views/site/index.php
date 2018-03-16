@@ -13,6 +13,11 @@ use yii\widgets\LinkPager;
 			
 $this->title = 'My Searchengine ';
 
+//$this->registerCssFile("/searchify/web/Flexor/css/style.css");
+//$this->registerCssFile("/searchify/web/Flexor/css/colour-blue.css");
+//$this->registerCssFile("/searchify/web/Flexor/css/colour-green.css");
+//$this->registerCssFile("/searchify/web/Flexor/css/colour-lavender.css");
+
 
 
 ?>
@@ -57,29 +62,57 @@ $this->title = 'My Searchengine ';
 	
 	<div>
 	
-		<h1>Search Results</h1>
-		<ul>
+		
 			
-		<?php if (  isset($searchresults) && (is_array($searchresults) || is_object($searchresults))  ) {  
+		<?php if (  isset($searchresults) && (is_array($searchresults) || is_object($searchresults))  ) { ?>
+		
+		<h3 class="block-title">
+					  Latest Items 
+		</h3>
+		
+		<?php
+		  
 				foreach($searchresults as $key => $searchresult) {
 		?>
-				<li>
 				
-					<?= 
-						//$searchresult = json_encode($searchresult, true);
-						print_r($searchresult);
-						//echo ($searchresult->_index)
-					?>
+				<div style="background-color:#f3f3f3;color:black;padding:20px;">
+				
+					<div class="media-left hidden-xs">
+					  <!-- Date desktop -->
+					  <div class="date-wrapper"> <span class="date-m">Feb</span> <span class="date-d">01</span> </div>
+					</div>
+					
+					<div class="media-body">
+					  <h4 class="media-heading">
+						  <a href="<?= print_r($searchresult['_source']['identifier']); ?>" class="text-weight-strong"><?= print_r($searchresult['_source']['title']); ?></a>
+						</h4>
+					  <!-- Meta details mobile -->
+					  <ul class="list-inline meta text-muted visible-xs">
+						<li><span class="visible-md">Created:</span> Fri 1st Feb 2013</li>
+						<li><a href="#">Kiel</a></li>
+					  </ul>
+					  <p>
+						<strong>Fraunhofer / Kiel</strong> 
+					  </p>
+					  <p>
+					  <?php  if (  !empty($searchresults['_source']['abstract'])  ) { 
+					     print_r($searchresult['_source']['abstract']); 
+					  }
+					  ?>
+					  <a href="<?= print_r($searchresult['_source']['identifier']); ?>">Read more <i class="fa fa-angle-right"></i></a>
+					  
+					  </p>
+					</div>
+				
+					
 
-				</li>
+				</div>
 			
 		
 				<?php  }   ?>
 		
 	
-		
-		</ul>
-		
+				
 		
 		
 		<?php  
@@ -97,6 +130,12 @@ $this->title = 'My Searchengine ';
 		
 	</div>
 	
+	
+	
+          
+          
+            
+          
 	
 	
 	 

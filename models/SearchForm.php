@@ -37,6 +37,29 @@ class SearchForm extends Model
 		//echo "we will do something";
 		return true ;
 	}
+	
+	public function multi_match_search($q, $indexName, $indexType, $from, $pageSize)
+	{
+		//echo "we will do something";
+		
+		
+		$search_results = [
+					'index' => $indexName,
+					'type' =>  $indexType,
+					'from' => $from,
+					'size' => $pageSize,
+					'body' => [
+						'query' => [
+							'multi_match' => [
+								'query'  => $q, 
+								'fields' => [ 'title']
+							]
+						]
+					]
+				];
+		
+		return $search_results ;
+	}
 
     
 }

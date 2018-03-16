@@ -86,57 +86,20 @@ class SiteController extends Controller
 			
 			if(Yii::$app->request->get('page')) 				
 			{
-				// Search for a document in ES 
-				$params = [
-					'index' => Yii::$app->params['indexName'],
-					'type' =>  Yii::$app->params['indexType'],
-					'from' => Yii::$app->request->get('page')[0],
-					'size' => Yii::$app->params['page_size'],
-					'body' => [
-						'query' => [
-							'multi_match' => [
-								'query'  => $q, 
-								'fields' => [ 'city', 'state', 'employer']
-							]
-						]
-					]
-				];
-
+				// Search page 
+				$params= $model->multi_match_search($q, Yii::$app->params['indexName'], Yii::$app->params['indexType'], Yii::$app->request->get('page')[0], Yii::$app->params['page_size']);
 			}
 			else
 			{
-				// Search for a document in ES 
-				$params = [
-					'index' => Yii::$app->params['indexName'],
-					'type' =>  Yii::$app->params['indexType'],
-					'from' => 0,
-					'size' => Yii::$app->params['page_size'],
-					'body' => [
-						'query' => [
-							'multi_match' => [
-								'query'  => $q, 
-								'fields' => [ 'city', 'state', 'employer']
-							]
-						]
-					]
-				];
+				// The search starts from page 0
+				$params= $model->multi_match_search($q, Yii::$app->params['indexName'], Yii::$app->params['indexType'], 0, Yii::$app->params['page_size']);
 				
 			}
 				
 			$response = $client->search($params);
 
-			#echo Url::to(['', 'id' => 100, '#' => 'content']);
-			#die;
-			
-			
-			//print_r($response['hits']['total']);
-			//die;
-			
 			// create a pagination object with the total count
 			$pagination = new Pagination(['totalCount' => $response['hits']['total'],  'pageSize' =>Yii::$app->params['page_size']] );
-			
-			
-			
 			
 			// Encode the JSON results
 			//$searchresults_json= json_decode($response['hits']['hits']);
@@ -144,10 +107,8 @@ class SiteController extends Controller
 			// If you do not specify this, the currently requested route will be used
 			$pagination->route = 'site/index';
 			
-			
 			// displays: /index.php?r=article%2Findex&page=100
 			//echo $pagination->createUrl(100);
-			#die;
 			
 			
 			// Send it to the viewer to draw it
